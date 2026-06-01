@@ -29,6 +29,8 @@ Todo en un dispositivo de menos de 50 gramos.
 - **Rehabilitación neurológica**: estimulación para pacientes con daño motor.
 - **Investigación en interfaces cerebro-máquina**: plataforma abierta para desarrollar nuevas aplicaciones.
 
+**Nota para desarrolladores de CORPUS:** Las capacidades de ENA (predicción, preprocesamiento, seguridad) están diseñadas para satisfacer los requisitos documentados en `docs/Mejoras-Inconsciente.md` del repositorio de CORPUS.
+
 ## Ventajas principales
 
 - **Sin cirugía**: se coloca como un audífono, sin riesgos ni procedimientos invasivos.
