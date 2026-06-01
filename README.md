@@ -51,6 +51,18 @@ Todo en un dispositivo de menos de 50 gramos.
 
 - **[Control de drones con ENA](docs/drones.md)**: caso de uso conceptual para operar drones (o enjambres) mediante señales cerebrales, sin joystick.
 
+## Integración con CORPUS (Sistema Corporal Artificial)
+
+ENA es el canal de comunicación bidireccional entre el cerebro humano y CORPUS. Para que CORPUS pueda operar de forma segura y autónoma, ENA incorpora las siguientes capacidades:
+
+- **Predicción de movimiento:** El firmware de ENA detecta potenciales de movimiento (MRCP) milisegundos antes de que el cerebro envíe la orden motora completa. Esto permite que CORPUS anticipe trayectorias y evite accidentes (colisiones, caídas de objetos).
+
+- **Preprocesamiento de la señal:** En lugar de enviar ondas EEG crudas, ENA extrae y envía características relevantes (bandas de frecuencia, intención detectada, nivel de atención/fatiga). Esto permite que CORPUS utilice sistemas expertos basados en tablas de decisión sin necesidad de una IA embebida pesada.
+
+- **Seguridad y prioridad vital:** ENA monitoriza la calidad de la señal y la fatiga mental del usuario. Si detecta una anomalía en los signos vitales (a través de CORPUS o de sus propios sensores), **puede ignorar órdenes del cerebro** y priorizar la integridad del paciente. Sigue la misma jerarquía que el inconsciente de CORPUS: Paciente > Avatar > Tareas.
+
+- **Redundancia y emergencia:** Si la conexión neuronal se pierde o degrada, ENA puede operar en un modo de "último recurso", enviando comandos de navegación básica para poner a CORPUS en un estado seguro.
+
 ## Proyectos relacionados
 
 - CORPUS — sistema corporal artificial
