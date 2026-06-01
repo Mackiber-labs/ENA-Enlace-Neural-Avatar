@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19372267.svg)](https://doi.org/10.5281/zenodo.19372267)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
-[![ES](https://img.shields.io/badge/Spanish-version-green.svg)](./README.md)
+[![ES](https://img.shields.io/badge/Spanish-version-blue.svg)](./README.md)
 
 The most famous brain-machine interfaces require surgery. Implants, brain electrodes, infection risks, rejection, and costly procedures. That limits them to laboratories or extreme cases.
 
@@ -47,6 +47,22 @@ All in a device weighing less than 50 grams.
 - Prototype (pending)
 - Clinical validation (pending)
 
+## Additional documentation
+
+- **Drone control with ENA**: conceptual use case for operating drones (or swarms) using brain signals, without a joystick.
+
+## Integration with CORPUS (Artificial Body System)
+
+ENA is the bidirectional communication channel between the human brain and CORPUS. For CORPUS to operate safely and autonomously, ENA incorporates the following capabilities:
+
+- **Movement prediction**: ENA's firmware detects movement-related cortical potentials (MRCP) milliseconds before the brain sends the complete motor command. This allows CORPUS to anticipate trajectories and avoid accidents (collisions, falling objects).
+
+- **Signal preprocessing**: Instead of sending raw EEG waves, ENA extracts and sends relevant features (frequency bands, detected intention, attention/fatigue level). This allows CORPUS to use expert systems based on decision tables without needing a heavy embedded AI.
+
+- **Safety and vital priority**: ENA monitors signal quality and the user's mental fatigue. If it detects an anomaly in vital signs (through CORPUS or its own sensors), it **can ignore brain commands** and prioritize patient integrity. It follows the same hierarchy as CORPUS's unconscious: Patient > Avatar > Tasks.
+
+- **Redundancy and emergency**: If the neural connection is lost or degrades, ENA can operate in a "last resort" mode, sending basic navigation commands to put CORPUS into a safe state.
+
 ## Related projects
 
 - CORPUS — artificial body system
@@ -60,17 +76,17 @@ Copyright © 2026 Enrique Aguayo. All rights reserved.
 
 This project is protected by copyright.
 
-PERMITTED:
+**PERMITTED:**
 - Non-commercial use for educational or research purposes.
 - Distribution without modification, as long as this license is maintained and credit is given to the author.
 
-PROHIBITED without express written authorization:
+**PROHIBITED** without express written authorization:
 - Commercial use (including, but not limited to: offering it as a service, SaaS, subscription, integration into revenue-generating products, or any use that generates direct or indirect economic benefit).
 - Modification for production environments.
 - Distribution of modified versions without authorization.
 
 For commercial licenses, technical support, enterprise pilots, or inquiries:
-Contact: eaguayo@migst.cl
+Contact: **eaguayo@migst.cl**
 
 Any use outside the permitted terms requires prior authorization from the author.
 
@@ -78,10 +94,10 @@ Commercial inquiries are welcome and will be answered within a maximum of 7 busi
 
 ## Author
 
-Enrique Aguayo H.
-Mackiber Labs
-Contact: eaguayo@migst.cl
-ORCID: 0009-0004-4615-6825
+**Enrique Aguayo H.**  
+Mackiber Labs  
+Contact: eaguayo@migst.cl  
+ORCID: 0009-0004-4615-6825  
 GitHub: @enriqueherbertag-lgtm
 
 Documentation assisted by Ana (DeepSeek), AI for research and technical optimization.
